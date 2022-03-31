@@ -7,6 +7,17 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+
+## INSTALL AND USE
+- Clone this project
+- Set MongoDB connection dan database
+- Migrate if u want
+- Use this method to inserting or get data
+-   1. http://127.0.0.1:8000/api/getstok => For Getstok
+-   2. http://127.0.0.1:8000/api/simpanmopbil => For Insert Data Product
+-   3. http://127.0.0.1:8000/api/penjualan => For Action Sale Product
+-   4. http://127.0.0.1:8000/api/laporan => Get Transaction Filter By Date
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
