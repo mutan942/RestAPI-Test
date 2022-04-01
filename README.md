@@ -18,6 +18,11 @@
 -   3. http://127.0.0.1:8000/api/penjualan => For Action Sale Product
 -   4. http://127.0.0.1:8000/api/laporan => Get Transaction Filter By Date
 
+## AUTH
+1. http://127.0.0.1:8000/api/auth/register
+2. http://127.0.0.1:8000/api/auth/login
+3. http://127.0.0.1:8000/api/auth/logout
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
