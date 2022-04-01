@@ -10,6 +10,7 @@
 
 ## INSTALL AND USE
 - Clone this project
+- - Copy.env -> rename to .env
 - Set MongoDB connection and database
 - Migrate if u want
 - Use this method to inserting or get data
