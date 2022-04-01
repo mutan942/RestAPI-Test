@@ -1,27 +1,26 @@
 <?php 
 namespace App\Repositories;
 
-use App\Models\Kendaraan;
+use App\Models\User;
 
-class ProductRepo {
+class UserRepo {
     
-    public function getall($param){
-        if(!empty($param["cari"])){
-            $test = Kendaraan::where('detail.mesin', 'like', "%$param[cari]%")->get();
-            return $test;
-        }else{
-            $test = Kendaraan::all();
-            return $test;
-        }
+    public function register($param){
+        $user = new User();
+        $user->name = $param["name"];
+        $user->email = $param["email"];
+        $user->password = bcrypt($param["password"]);
+        $post = $user->save();
+        return $post;
     }
 
     public function savecar($data){
         $car = new Kendaraan();
         $car->tahun_keluaran = $data['tahun_keluaran'];
         $car->warna = $data['warna'];
-        $car->harga = floatval($data['harga']);        
+        $car->harga = $data['harga'];        
         $car->jenis = $data['jenis']; 
-        $car->stok = intval($data['stok']); 
+        $car->stok = $data['stok']; 
         if($data['jenis']=="mobil"){
             $car->detail = [
                 "mesin" => $data['mesin'],

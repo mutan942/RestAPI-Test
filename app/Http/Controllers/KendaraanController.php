@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\ProductService;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 class KendaraanController extends Controller
 {
     private $pservice;
-    private $jwtService;
 
     public function __construct(ProductService $pservice){
         $this->pservice = $pservice;
@@ -41,22 +41,9 @@ class KendaraanController extends Controller
             ];
             return response()->json($res, 400);
         }
-        $data['tahun_keluaran'] = $request->get('tahun_keluaran');
-        $data['warna'] = $request->get('warna');
-        $data['harga'] = intval($request->get('harga'));       
-        $data['jenis'] = $request->get('jenis');
-        $data['stok'] = intval($request->get('stok'));
-        if($data['jenis']=="mobil"){
-            $data['mesin'] = $request->get('mesin');
-            $data['kapasitas'] = $request->get('kapasitas');
-            $data['tipe'] =$request->get('tipe');
-        }else{
-            $data['mesin'] = $request->get('mesin');
-            $data['suspensi'] = $request->get('suspensi');
-            $data['transmisi'] =$request->get('transmisi');
-        } 
         
-        $test = $this->pservice->savecar($data);
+        
+        $test = $this->pservice->savecar($request->all());
         return response()->json($test, 200);
     }
 }
