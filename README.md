@@ -10,13 +10,18 @@
 
 ## INSTALL AND USE
 - Clone this project
-- Set MongoDB connection dan database
+- Set MongoDB connection and database
 - Migrate if u want
 - Use this method to inserting or get data
 -   1. http://127.0.0.1:8000/api/getstok => For Getstok
 -   2. http://127.0.0.1:8000/api/simpanmopbil => For Insert Data Product
 -   3. http://127.0.0.1:8000/api/penjualan => For Action Sale Product
 -   4. http://127.0.0.1:8000/api/laporan => Get Transaction Filter By Date
+
+## AUTH
+1. http://127.0.0.1:8000/api/auth/register
+2. http://127.0.0.1:8000/api/auth/login
+3. http://127.0.0.1:8000/api/auth/logout
 
 ## About Laravel
 
