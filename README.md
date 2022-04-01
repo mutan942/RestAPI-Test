@@ -10,7 +10,7 @@
 
 ## INSTALL AND USE
 - Clone this project
-- Set MongoDB connection dan database
+- Set MongoDB connection and database
 - Migrate if u want
 - Use this method to inserting or get data
 -   1. http://127.0.0.1:8000/api/getstok => For Getstok
